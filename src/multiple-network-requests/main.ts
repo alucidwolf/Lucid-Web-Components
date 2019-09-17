@@ -1,5 +1,16 @@
 import { fromEvent } from "rxjs";
 
+customElements.define(
+  "custom-list",
+  class CustomList extends HTMLElement {
+    render() {
+      this.innerHTML = `
+      <p>The filter is: ${this.getAttribute("filter")}
+    `;
+    }
+  }
+);
+
 // const buttonWithLoader = document.getElementById("bwl");
 
 // const observer = {
